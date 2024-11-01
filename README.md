@@ -131,4 +131,4 @@ For questions or suggestions, please open an issue in the GitHub repository.
 - [ ] Implement geolocation
 
 ---
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Mohammad Farhaan Ali]
