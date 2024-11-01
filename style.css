@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #1a1a1a, #4a90e2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.weather, #weatherInfo {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 1rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.weather:hover, #weatherInfo:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#cityInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  margin: 1rem 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#cityInput:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+#add {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#add:hover {
+  background: #357abd;
+}
+
+#add:active {
+  transform: scale(0.98);
+}
+
+.wrapper {
+  text-align: left;
+}
+
+.wrapper p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.wrapper span {
+  color: #4a90e2;
+  font-weight: 600;
+}
+
+.loading {
+  display: none;
+  margin: 1rem 0;
+}
+
+.loading::after {
+  content: "Loading...";
+  color: #4a90e2;
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: "Loading.  "; }
+  40% { content: "Loading.. "; }
+  60% { content: "Loading..."; }
+  80%, 100% { content: "Loading.  "; }
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 1rem;
+  }
+  
+  h1 {
+      font-size: 1.5rem;
+  }
+  
+  #cityInput, #add {
+      font-size: 0.9rem;
+  }
+}
